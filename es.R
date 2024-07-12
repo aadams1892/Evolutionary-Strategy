@@ -134,7 +134,7 @@ es <- function(
     
     # Check if termination conditions have been met.
     # No difference with optimal vals
-    if (abs(gen[[1]][[2]]) <= 0.001) {
+    if (abs(gen[[1]][[2]]) != 0) {
       optimalFound <- TRUE
       
     # Still have not found optimal
