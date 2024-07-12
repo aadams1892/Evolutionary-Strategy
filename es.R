@@ -207,6 +207,12 @@ pdf(outPlot)
 plot(1:numIters, bestFs, type="l", xlab="Generation", ylab="Best Fitness")
 title(main = "Best Fitness")
 
+# Check if ES_output exists. If it doesn't, make it.
+if (!file.exists("ES_output") {
+    cmd <- paste0("mkdir ES_output")
+    system(cmd)
+}
+    
 # Create output folder
 outFolder <- paste0(getwd(), "/ES_output/", endTime)
 outFolder <- gsub(" ", "_", outFolder)
